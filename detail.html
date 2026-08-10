@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Paket & Booking - GeprekJuara</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Geprek<span>Juara</span></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li><a href="detail.html" class="active">Detail Paket</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <!-- Galeri 3 Paket Utama -->
+            <h1>3 Paket Utama</h1>
+            <p class="section-subtitle">Pilih paket yang sesuai dengan selera dan budget Anda</p>
+            
+            <div class="gallery grid-3">
+                <div class="gallery-item">
+                    <div class="placeholder-img gallery-placeholder">🍗</div>
+                    <h3>Paket Jago</h3>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img gallery-placeholder">🥘</div>
+                    <h3>Paket Juara</h3>
+                </div>
+                <div class="gallery-item">
+                    <div class="placeholder-img gallery-placeholder">🍽️</div>
+                    <h3>Paket Sultan</h3>
+                </div>
+            </div>
+
+            <!-- Spesifikasi Ringkas -->
+            <div class="specs-table">
+                <h2>Spesifikasi Paket</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Komponen</th>
+                            <th>Paket Jago</th>
+                            <th>Paket Juara</th>
+                            <th>Paket Sultan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ayam Geprek</td>
+                            <td>Original</td>
+                            <td>Pilihan (Original/Setan)</td>
+                            <td>Mozzarella</td>
+                        </tr>
+                        <tr>
+                            <td>Nasi</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                            <td>✔</td>
+                        </tr>
+                        <tr>
+                            <td>Lauk Tambahan</td>
+                            <td>-</td>
+                            <td>Tahu & Tempe</td>
+                            <td>Tahu, Tempe, Telur</td>
+                        </tr>
+                        <tr>
+                            <td>Minuman</td>
+                            <td>Es Teh</td>
+                            <td>Es Jeruk</td>
+                            <td>Milkshake</td>
+                        </tr>
+                        <tr>
+                            <td>Harga</td>
+                            <td>Rp 20.000</td>
+                            <td>Rp 28.000</td>
+                            <td>Rp 35.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Form Booking -->
+            <div id="booking" class="booking-section">
+                <h2>Booking Paket (Pre-Order)</h2>
+                <p>Pesan sekarang untuk makan siang/malam nanti. Kami akan konfirmasi via email.</p>
+                
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="paket">Paket Pilihan</label>
+                        <select id="paket" name="paket" required>
+                            <option value="">Pilih paket</option>
+                            <option value="Paket Jago">Paket Jago - Rp 20.000</option>
+                            <option value="Paket Juara">Paket Juara - Rp 28.000</option>
+                            <option value="Paket Sultan">Paket Sultan - Rp 35.000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Pengambilan</label>
+                        <input type="date" id="tanggal" name="tanggal" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Booking Sekarang</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GeprekJuara. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
