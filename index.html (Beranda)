@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeprekJuara - Ayam Geprek Premium</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Geprek<span>Juara</span></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Beranda</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li><a href="detail.html">Detail Paket</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>Pedasnya Bikin Nagih,<br>Kualitasnya Juara!</h1>
+                <p>Nikmati sensasi ayam geprek dengan sambal pilihan dan bahan premium. Tersedia 3 paket utama untuk segala selera.</p>
+                <a href="katalog.html" class="btn btn-primary">Lihat Menu Lengkap</a>
+            </div>
+            <div class="hero-image">
+                <div class="placeholder-img hero-placeholder">🥘</div>
+            </div>
+        </section>
+
+        <!-- Menu Unggulan -->
+        <section class="featured section">
+            <div class="container">
+                <h2>3 Menu Unggulan</h2>
+                <p class="section-subtitle">Favorit pelanggan yang selalu ludes setiap hari</p>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-image placeholder-img">🍗</div>
+                        <div class="card-body">
+                            <h3>Geprek Original</h3>
+                            <p>Ayam geprek klasik dengan sambal bawang andalan.</p>
+                            <span class="price">Rp 15.000</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image placeholder-img">🔥</div>
+                        <div class="card-body">
+                            <h3>Geprek Setan</h3>
+                            <p>Level pedas maksimal untuk pecinta tantangan.</p>
+                            <span class="price">Rp 18.000</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image placeholder-img">🧀</div>
+                        <div class="card-body">
+                            <h3>Geprek Mozzarella</h3>
+                            <p>Perpaduan gurih keju mozzarella dengan sambal.</p>
+                            <span class="price">Rp 22.000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 Paket Utama -->
+        <section class="packages section bg-light">
+            <div class="container">
+                <h2>3 Paket Menu Utama</h2>
+                <p class="section-subtitle">Pilihan lengkap untuk makan siang atau malam</p>
+                <div class="grid-3">
+                    <div class="card package-card">
+                        <div class="card-badge">HEMAT</div>
+                        <h3>Paket Jago</h3>
+                        <p>Ayam geprek + nasi + es teh</p>
+                        <span class="price">Rp 20.000</span>
+                        <ul class="package-features">
+                            <li>1 Ayam Geprek Original</li>
+                            <li>Nasi Putih</li>
+                            <li>Es Teh Manis</li>
+                        </ul>
+                        <a href="detail.html#booking" class="btn btn-outline">Pesan Sekarang</a>
+                    </div>
+                    <div class="card package-card featured-package">
+                        <div class="card-badge">TERLARIS</div>
+                        <h3>Paket Juara</h3>
+                        <p>Ayam geprek + nasi + tahu tempe + es jeruk</p>
+                        <span class="price">Rp 28.000</span>
+                        <ul class="package-features">
+                            <li>1 Ayam Geprek Pilihan</li>
+                            <li>Nasi Putih</li>
+                            <li>Tahu & Tempe Goreng</li>
+                            <li>Es Jeruk Segar</li>
+                        </ul>
+                        <a href="detail.html#booking" class="btn btn-primary">Pesan Sekarang</a>
+                    </div>
+                    <div class="card package-card">
+                        <div class="card-badge">PREMIUM</div>
+                        <h3>Paket Sultan</h3>
+                        <p>Ayam geprek + nasi + lengkap + milkshake</p>
+                        <span class="price">Rp 35.000</span>
+                        <ul class="package-features">
+                            <li>1 Ayam Geprek Mozzarella</li>
+                            <li>Nasi Putih</li>
+                            <li>Tahu, Tempe, Telur</li>
+                            <li>Milkshake Vanilla</li>
+                        </ul>
+                        <a href="detail.html#booking" class="btn btn-outline">Pesan Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keunggulan -->
+        <section class="advantages section">
+            <div class="container">
+                <h2>Keunggulan GeprekJuara</h2>
+                <div class="grid-3">
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🐔</div>
+                        <h3>Ayam Segar</h3>
+                        <p>Menggunakan ayam negeri segar yang diolah setiap hari.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🌶️</div>
+                        <h3>Sambal Pilihan</h3>
+                        <p>5 level kepedasan yang bisa disesuaikan selera.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <div class="advantage-icon">🏍️</div>
+                        <h3>Pengiriman Cepat</h3>
+                        <p>Kerjasama dengan ojol terpercaya, sampai tujuan panas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GeprekJuara. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
