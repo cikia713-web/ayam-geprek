@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Menu - GeprekJuara</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Geprek<span>Juara</span></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="katalog.html" class="active">Katalog</a></li>
+                    <li><a href="detail.html">Detail Paket</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container">
+            <h1>Katalog Menu</h1>
+            <p class="section-subtitle">Pilih menu favoritmu dan pesan sekarang</p>
+
+            <!-- Filter -->
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="filterKategori">Kategori:</label>
+                    <select id="filterKategori">
+                        <option value="semua">Semua</option>
+                        <option value="original">Original</option>
+                        <option value="pedas">Pedas</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterHarga">Harga:</label>
+                    <select id="filterHarga">
+                        <option value="semua">Semua</option>
+                        <option value="murah">< Rp 18.000</option>
+                        <option value="sedang">Rp 18.000 - Rp 25.000</option>
+                        <option value="mahal">> Rp 25.000</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid Produk -->
+            <div id="productGrid" class="grid-3 product-grid">
+                <!-- Diisi oleh JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 GeprekJuara. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
