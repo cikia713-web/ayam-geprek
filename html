@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>Ayam Geprek EV • Katalog & Test Drive</title>
+  <!-- CSS murni, sans-serif, palet hijau-putih -->
+  <style>
+    /* ----- reset & global ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f5faf5;
+      color: #1e3a2e;
+      line-height: 1.5;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      color: #1e6b3b;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ----- palet hijau-putih ----- */
+    .bg-hijau {
+      background: #1e6b3b;
+      color: white;
+    }
+    .bg-hijau-muda {
+      background: #e6f3e9;
+    }
+    .tombol {
+      display: inline-block;
+      background: #1e6b3b;
+      color: white;
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+      text-align: center;
+    }
+    .tombol:hover {
+      background: #14522b;
+      transform: scale(0.97);
+    }
+    .tombol-outline {
+      background: transparent;
+      border: 2px solid #1e6b3b;
+      color: #1e6b3b;
+    }
+    .tombol-outline:hover {
+      background: #1e6b3b;
+      color: white;
+    }
+
+    /* ----- navigasi ----- */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 0 1.2rem;
+      border-bottom: 2px solid #d0e6d0;
+      margin-bottom: 2rem;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #1e6b3b;
+      letter-spacing: -0.5px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      font-weight: 600;
+    }
+    .nav-links a {
+      color: #1e3a2e;
+      padding: 0.3rem 0;
+      border-bottom: 3px solid transparent;
+    }
+    .nav-links a.aktif {
+      border-bottom-color: #1e6b3b;
+      color: #1e6b3b;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #1e6b3b;
+    }
+
+    /* ----- halaman (konten) ----- */
+    .halaman {
+      display: block;
+    }
+    .halaman.sembunyi {
+      display: none;
+    }
+
+    /* ----- beranda hero ----- */
+    .hero {
+      background: #e6f3e9;
+      border-radius: 32px;
+      padding: 2rem 1.5rem;
+      margin-bottom: 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .hero-gambar {
+      flex: 1 1 200px;
+      background: #cde0cd;
+      border-radius: 24px;
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #1e6b3b;
+    }
+    .hero-teks {
+      flex: 2 1 260px;
+    }
+    .hero-teks h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero-teks p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #1e3a2e;
+    }
+
+    .keunggulan {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0 1.5rem;
+      justify-content: center;
+    }
+    .keunggulan-item {
+      background: white;
+      border-radius: 20px;
+      padding: 1rem 1.8rem;
+      box-shadow: 0 4px 12px rgba(0,30,10,0.04);
+      flex: 1 1 120px;
+      text-align: center;
+      border: 1px solid #d8ead8;
+    }
+    .keunggulan-item span {
+      font-size: 2rem;
+      display: block;
+    }
+
+    /* ----- katalog grid & filter ----- */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .filter-bar label {
+      font-weight: 600;
+      margin-right: 0.3rem;
+    }
+    .filter-bar select, .filter-bar input {
+      padding: 0.5rem 1rem;
+      border: 1px solid #cde0cd;
+      border-radius: 40px;
+      background: #f9fdf9;
+      font-size: 0.95rem;
+    }
+    .filter-bar .tombol-reset {
+      background: #e0eee0;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .grid-produk {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.8rem;
+      margin: 1.8rem 0;
+    }
+    .kartu-produk {
+      background: white;
+      border-radius: 24px;
+      padding: 1rem 1rem 1.2rem;
+      box-shadow: 0 6px 16px rgba(0,30,10,0.04);
+      border: 1px solid #e0efe0;
+      transition: 0.15s;
+    }
+    .kartu-produk:hover {
+      transform: translateY(-4px);
+      border-color: #1e6b3b;
+    }
+    .kartu-produk .gambar-placeholder {
+      background: #d8ead8;
+      border-radius: 16px;
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      color: #1e6b3b;
+      margin-bottom: 0.8rem;
+    }
+    .kartu-produk h3 {
+      font-size: 1.2rem;
+    }
+    .kartu-produk .merek {
+      color: #3d6b4d;
+      font-size: 0.9rem;
+    }
+    .kartu-produk .harga {
+      font-weight: 700;
+      color: #1e6b3b;
+      margin: 0.3rem 0;
+    }
+    .kartu-produk .jarak {
+      font-size: 0.9rem;
+      color: #2b4d38;
+    }
+    .kartu-produk .tombol-kecil {
+      margin-top: 0.8rem;
+      display: inline-block;
+      background: #1e6b3b;
+      color: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* ----- detail produk ----- */
+    .detail-wrap {
+      background: white;
+      border-radius: 32px;
+      padding: 2rem;
+      box-shadow: 0 8px 24px rgba(0,30,10,0.04);
+    }
+    .detail-galeri {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .detail-galeri .gambar-placeholder {
+      background: #d8ead8;
+      border-radius: 20px;
+      flex: 1 1 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      color: #1e6b3b;
+    }
+    .detail-spesifikasi {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem 2rem;
+      background: #f4faf4;
+      padding: 1.5rem;
+      border-radius: 24px;
+      margin: 1rem 0 1.8rem;
+    }
+    .detail-spesifikasi span {
+      font-weight: 600;
+      color: #1e3a2e;
+    }
+
+    /* ----- form booking ----- */
+    .form-booking {
+      background: #f4faf4;
+      border-radius: 32px;
